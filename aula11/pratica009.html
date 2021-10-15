@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descobrindo Países</title>
+    <style>
+        h1{
+            background: red;
+            width: 350px;
+            text-align: center;
+        }
+        input#but {
+            background: chartreuse;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <h1>Descobrindo Países</h1>
+    Digite seu país: <input type="text" id="país">
+    <input id="but" type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        
+        function verificar() {
+            var país = document.querySelector('input#país')
+            var res = document.querySelector('div#res')
+            res.innerHTML = `<p>Seu país é: <strong>${país.value}</strong></p>`
+            if (país.value.toLowerCase() == 'Brasil'.toLowerCase()) {
+                res.innerHTML += `Você é <strong>brasileiro(a).</strong>`
+            } else {
+                res.innerHTML += `Você é <strong>estrangeiro(a).</strong>`
+            } 
+        }
+
+    </script>
+</body>
+</html>

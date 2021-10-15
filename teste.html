@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 120px;
+        }
+        div#res {
+            margin-top: 20px;
+        }
+        p {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Praticando...</h1>
+    <p>Calculando Valores</p>
+    
+    <input type="number" name="numero1s" id="numero1s"> +
+    <input type="number" name="numero2s" id="numero2s">
+    <input type="button" value="Somar" onclick="somar()">
+
+    <br> 
+    <input type="number" name="numero1sub" id="numero1sub">&nbsp-&nbsp
+    <input type="number" name="numero2sub" id="numero2sub">
+    <input type="button" value="Subtrair" onclick="subtrair()">
+
+    <br>
+    <input type="number" name="numero1mult" id="numero1mult"> x
+    <input type="number" name="numero2mult" id="numero2mult">
+    <input type="button" value="Multiplicar" onclick="multiplicar()">
+
+    <br>
+    <input type="number" name="numero1div" id="numero1div"> /&nbsp
+    <input type="number" name="numero2div" id="numero2div">
+    <input type="button" value="Dividir" onclick="dividir()">
+    
+    <div id="res">Resultado</div> 
+
+    <script>
+
+        function somar() {
+            let tn1 = document.querySelector('input#numero1s')
+            let tn2 = document.querySelector('input#numero2s')
+            let res = document.getElementById('res')
+            let n1 = Number(tn1.value)
+            let n2 = Number(tn2.value)
+            let s = n1 + n2
+            res.innerHTML = `A soma de ${n1} e ${n2} é igual a <strong>${s}</strong>`
+        }
+        function subtrair() {
+            let tn1 = document.querySelector('input#numero1sub')
+            let tn2 = document.querySelector('input#numero2sub')
+            let res = document.getElementById('res')
+            let n1 = Number(tn1.value)
+            let n2 = Number(tn2.value)
+            let sub = n1 - n2
+            res.innerHTML = `A subtração de ${n1} e ${n2} é igual a <strong>${sub}</strong>`
+        }
+        function multiplicar() {
+            let tn1 = document.querySelector('input#numero1mult')
+            let tn2 = document.querySelector('input#numero2mult')
+            let res = document.getElementById('res')
+            let n1 = Number(tn1.value)
+            let n2 = Number(tn2.value)
+            let mult = n1 * n2
+            res.innerHTML = `A multiplicação de ${n1} e ${n2} é igual  <strong>${mult}</strong>`
+        }
+        function dividir() {
+            let tn1 = document.querySelector('input#numero1div')
+            let tn2 = document.querySelector('input#numero2div')
+            let res = document.getElementById('res')
+            let n1 = Number(tn1.value)
+            let n2 = Number(tn2.value)
+            let div = n1 / n2
+            res.innerHTML = `A divisão de ${n1} para ${n2} é igual a <strong>${div}</strong>`
+        }
+    </script>
+</body>
+</html>
