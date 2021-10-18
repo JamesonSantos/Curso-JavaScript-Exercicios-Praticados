@@ -4,19 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de Exercício</title>
+    <title>Tabuada</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Tabuada</h1>
     </header>
     <section>
         <div>
-            Testando...
+            <p>Número: 
+            <input type="number" name="numero" id="txtnum">
+            <input type="button" value="Gerar Tabuada" onclick="gerartabuada()">
+                <input type="button" value="Limpar" onclick="limpar()"></p>
+            <center><p>Operação:</p></center>
+            <p>
+            <input type="radio" name="radop" id="adicao" checked>
+            <label for="adicao">Adição</label>
+            <input type="radio" name="radop" id="subtracao">
+            <label for="subtracao">Subtração</label>
+            <input type="radio" name="radop" id="multiplicacao">
+            <label for="multiplicacao">Multiplicação</label>
+            <input type="radio" name="radop" id="divisao">
+            <label for="divisao">Divisão</label></p>
         </div>
         <div>
-            Olá!
+            <select name="tabuada" id="seltab" size="10">
+                <option>Digite um número acima</option>
+            </select> 
         </div>
     </section>
     <footer>
